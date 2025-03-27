@@ -28,6 +28,13 @@
             <div class="invalid-feedback"> {{ $errors->first('email') }} </div>
         @endif
     </div>
+    <div class="mb-3">
+        <label class="form-label">Permissao</label>
+        <select name="permissao_do_usuario" class="form-select" aria-label="Clique para selecionar">
+            <option value="IsAdmin">IsAdmin</option>
+            <option value="IsUser">IsUser</option>
+          </select>
+    </div>
 
     <button type="submit" class="btn btn-success"> Gravar </button>
 </form>
