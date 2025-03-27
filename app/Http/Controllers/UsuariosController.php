@@ -34,6 +34,7 @@ class usuariosController extends Controller
                 [
                     "name" => $data['name'],
                     "email" => $data['email'],
+                    "permissao_do_usuario" => $data['permissao_do_usuario'],
                     "password" => Hash::make($data['password']),
                 ]
                 );
