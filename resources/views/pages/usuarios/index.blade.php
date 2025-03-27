@@ -9,12 +9,12 @@
         <form action="{{ route('usuarios.index') }}" method="GET">
             <input type="text" name="pesquisar" placeholder="Digite para pesquisar"/>
             <button type="submit"> Pesquisar</button>
-       
-                <a type="button" href="{{ route('usuarios.create.get') }}" class="btn btn-success float-end">
-                Incluir
-                </a>
-       
 
+                @can('acessoAPaginaUsuario', Auth::user())
+                    <a type="button" href="{{ route('usuarios.create.get') }}" class="btn btn-success float-end">
+                    Incluir
+                     </a>
+                 @endcan             
         </form>
 
         <div class="table-responsive mt-4">
@@ -25,8 +25,10 @@
                     <thead>
                         <tr>
                             <th>Nome</th>                       
-                            <th>Email</th>
-                            <th>Açoes</th>                          
+                            <th>Email</th>                                                     
+                             <th>Permissão</th>  
+                            <th>Acessos dos Usuários</th> 
+                            <th>Açoes</th>                  
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +36,8 @@
                             <tr>
                                 <td> {{ $user->name }} </td>
                                 <td> {{ $user->email }} </td>
+                                <td> {{ $user->permissao_do_usuario }} </td>
+                                <td> {{ $user->acesso_usuario }} </td>
                                 <td>
                                     <form style="display: inline" action="{{ route('usuarios.delete', $user->id) }}" method="POST">
                                         @csrf

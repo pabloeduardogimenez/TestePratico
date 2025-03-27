@@ -2,6 +2,7 @@
       <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="sidebarMenuLabel">Auto-Gestor</h5>
+      
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
@@ -13,28 +14,37 @@
               </a>
             </li>
             <li class="nav-item">
+              @can('acessoAPaginaUsuario', Auth::user())
               <a class="nav-link d-flex align-items-center gap-2" href="{{ route('usuarios.index') }}">
                 <svg class="bi"><use xlink:href="#people"/></svg>
                 Usuarios
               </a>
+              @endcan 
             </li>
             <li class="nav-item">
+             @can('acessoProdutos', Auth::user())
               <a class="nav-link d-flex align-items-center gap-2" href="{{ route('produtos.index') }}">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
                 Gestão Produtos
               </a>
+             @endcan   
             </li>
+
             <li class="nav-item">
+             @can('acessoMarcas', Auth::user())
               <a class="nav-link d-flex align-items-center gap-2" href="{{ route('marcas.index') }}">
                 <svg class="bi"><use xlink:href="#puzzle"/></svg>
                 Gestão Marcas
               </a>
+              @endcan 
             </li>
             <li class="nav-item">
+            @can('acessoCategoria', Auth::user())
               <a class="nav-link d-flex align-items-center gap-2" href="{{ route('categorias.index') }}">
                 <svg class="bi"><use xlink:href="#graph-up"/></svg>
                 Gestão de Categorias
               </a>
+              @endcan
             </li>           
           </ul>    
           <hr class="my-3">

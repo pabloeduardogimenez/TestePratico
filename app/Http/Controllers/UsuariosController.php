@@ -33,8 +33,9 @@ class usuariosController extends Controller
                 User::create(
                 [
                     "name" => $data['name'],
-                    "email" => $data['email'],
+                    "email" => $data['email'],                    
                     "permissao_do_usuario" => $data['permissao_do_usuario'],
+                    "acesso_usuario" => $data['acesso_usuario'],
                     "password" => Hash::make($data['password']),
                 ]
                 );
@@ -43,5 +44,26 @@ class usuariosController extends Controller
         }
 
         return view('pages.usuarios.create');
+    }
+    public function update(FormRequestUsuarios  $request, $idUser) {
+        if ($request->method() == "PUT") {
+            $data = $request->all();
+            $buscaRegistro = User::find($idUser);
+            
+            $update  = [
+                    "name" => $data['name'],
+                    "email" => $data['email'],                    
+                    "permissao_do_usuario" => $data['permissao_do_usuario'],
+                    "acesso_usuario" => $data['acesso_usuario'],
+                    "password" => Hash::make($data['password']),
+            ];
+            $buscaRegistro->update($update);
+            return redirect('/usuarios');
+        }
+
+        $findUser = User::where('id', '=', $idUser)->first();
+
+        return view('pages.usuarios.update', compact('findUser'));
+
     }
 }

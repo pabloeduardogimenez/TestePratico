@@ -10,18 +10,34 @@
     @csrf
     <div class="mb-3">
         <label class="form-label">Nome</label>
-        <input value="{{ $findUser->nome }}" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome">
-        @if ($errors->has('nome'))
-            <div class="invalid-feedback"> {{ $errors->first('nome') }} </div>
+        <input value="{{ $findUser->name }}" type="text" class="form-control @error('name') is-invalid @enderror" name="name">
+        @if ($errors->has('name'))
+            <div class="invalid-feedback"> {{ $errors->first('name') }} </div>
         @endif
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Telefone</label>
-        <input value="{{ $findUser->numero }}" id="telefoneMask" type="text" class="form-control" name="numero">
     </div>
     <div class="mb-3">
         <label class="form-label">E-mail</label>
         <input value="{{ $findUser->email }}" type="text" class="form-control" name="email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Senha</label>
+        <input value="{{ $findUser->password }}" type="password" class="form-control" name="password">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Permissao</label>
+        <select name="permissao_do_usuario" class="form-select" aria-label="Clique para selecionar">
+        <option value="IsAdmin" @selected($findUser->permissao_do_usuario == "IsAdmin") >IsAdmin</option>
+        <option value="IsUser" @selected($findUser->permissao_do_usuario == "IsUser")>IsUser</option>
+          </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Acessos dos Usuários</label>
+        <select name="acesso_usuario" class="form-select" aria-label="Clique para selecionar">
+        <option value="produtos" @selected($findUser->acesso_usuario == "produtos") >Gestão de Produtos</option>
+        <option value="marcas" @selected($findUser->acesso_usuario == "marcas")>Gestão de Marcas</option>
+        <option value="categorias" @selected($findUser->acesso_usuario == "categorias")>Gestão de Categorias</option>
+        <option value="total" @selected($findUser->acesso_usuario == "total")>Acesso Total</option>
+          </select>
     </div>
 
     <button type="submit" class="btn btn-success"> Gravar </button>

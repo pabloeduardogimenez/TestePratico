@@ -3,6 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\User;
+use App\Policies\ControleUsuarioPolicy;
+use Illuminate\Support\Facades\Gate;
+
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        //Gate::policy(Order::class, OrderPolicy::class);
     }
 
     /**
@@ -19,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Gate::policy(User::class, ControleUsuarioPolicy::class);
+
     }
 }

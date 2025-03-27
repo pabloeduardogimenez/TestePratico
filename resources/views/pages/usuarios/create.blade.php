@@ -35,6 +35,15 @@
             <option value="IsUser">IsUser</option>
           </select>
     </div>
+    <div class="mb-3">
+        <label class="form-label">Acessos dos Usuários</label>
+        <select name="acesso_usuario" class="form-select" aria-label="Clique para selecionar">
+            <option value="produtos">Gestão de Produtos</option>
+            <option value="marcas">Gestão de Marcas</option>
+            <option value="categorias">Gestão de Categorias</option>
+            <option value="total">Acesso Total</option>
+          </select>
+    </div>
 
     <button type="submit" class="btn btn-success"> Gravar </button>
 </form>
