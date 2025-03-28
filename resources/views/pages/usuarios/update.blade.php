@@ -21,7 +21,7 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Senha</label>
-        <input value="{{ $findUser->password }}" type="text" class="form-control" name="password">
+        <input value="{{ $findUser->password }}" type="password" class="form-control" name="password">
     </div>
     <div class="mb-3">
         <label class="form-label">Permissao</label>

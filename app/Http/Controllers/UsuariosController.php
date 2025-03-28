@@ -29,14 +29,12 @@ class usuariosController extends Controller
 
     public function create(FormRequestUsuarios $request) {
         if ($request->method() == "POST") {
-            $data = $request->all(); 
-           // dd($data);        
+            $data = $request->all();                     
                 User::create(
                 [
                     "name" => $data['name'],
                     "email" => $data['email'],                    
-                    "permissao_do_usuario" => $data['permissao_do_usuario'],
-                    //"acessos" => '["acessos2"]',
+                    "permissao_do_usuario" => $data['permissao_do_usuario'],                  
                     "acesso_usuario" => $data['acesso_usuario'],
                     "password" => Hash::make($data['password']),
                 ]

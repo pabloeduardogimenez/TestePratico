@@ -43,20 +43,7 @@
             <option value="categorias">Gestão de Categorias</option>
             <option value="total">Acesso Total</option>
           </select>
-    </div>
-    <div class="form-group">
-        <label for="title">Adicione Itens:</label>
-        <div class="form-group">
-            <input type="checkbox" name="acessos[]" value="produtos"> Produtos
-        </div>
-        <div class="form-group">
-            <input type="checkbox" name="acessos[]" value="marcas"> Marcas
-        </div>
-        <div class="form-group">
-            <input type="checkbox" name="acessos[]" value="categorias"> Categorias
-        </div>
-        
-    </div>
+    </div>    
 
     <button type="submit" class="btn btn-success"> Gravar </button>
 </form>
