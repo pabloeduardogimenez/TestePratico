@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28/03/2025 às 18:44
+-- Tempo de geração: 28/03/2025 às 19:11
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -50,7 +50,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (23, 'joao', 'joao@gmail.com', NULL, '$2y$12$ia2Gq/ihdAem25wz087wfeEwOvf1IINu2WrDiE7EiIM5SP2aiXvN.', NULL, '2025-03-28 00:15:33', '2025-03-28 20:28:03', 'Comum', 'categorias'),
 (24, 'maria', 'maria@gmail.com', NULL, '$2y$12$3paeEXt.rWkbQLlHDLzn7eSSuff4pjbAi9lo47/me/wOr9kfqw.Tm', NULL, '2025-03-28 00:31:40', '2025-03-28 20:42:41', 'Comum', 'marcas'),
 (26, 'abc', 'abc@abc', NULL, '$2y$12$zX2epYn4eceCvVq9l4EhsulaUfvliPTWQ3./biYBqh2qDj01hv/I2', NULL, '2025-03-28 20:14:34', '2025-03-28 20:42:13', 'Comum', 'total'),
-(27, 'admin', 'admin@admin', NULL, '$2y$12$I2mL8RgiSbFpT4yLi6Dti.33kdgsv4v5TpFdi4UrQrNliMqq/R1QK', NULL, '2025-03-28 20:16:54', '2025-03-28 20:35:48', 'Administrador', 'total'),
+(27, 'admin', 'admin@admin', NULL, '$2y$12$1zYmorLWbL2KaJ0uB9wHMeJSTYpGVPy6L2LgOu3XGRQ/x5gOrcOZi', NULL, '2025-03-28 20:16:54', '2025-03-28 21:02:41', 'Administrador', 'total'),
 (28, 'superadmin', 'superadmin@superadmin', NULL, '$2y$12$0hsEoS1HN/hJBOAP9UgL4eJNSWnSyw6t1U85hYlbKnjGwyUT/bE8G', NULL, '2025-03-28 20:17:18', '2025-03-28 20:36:41', 'Administrador', 'total');
 
 --
