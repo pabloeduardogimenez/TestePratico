@@ -36,7 +36,9 @@
                             <tr>
                                 <td> {{ $user->name }} </td>
                                 <td> {{ $user->email }} </td>
-                                <td> {{ $user->permissao_do_usuario }} </td>
+                                <td> 
+                                    {{ $user->permissao_do_usuario }}
+                                </td>
                                 <td> {{ $user->acesso_usuario }} </td>
                                 <td>
                                     <form style="display: inline" action="{{ route('usuarios.delete', $user->id) }}" method="POST">

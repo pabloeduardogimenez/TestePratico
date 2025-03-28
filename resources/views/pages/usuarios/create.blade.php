@@ -13,14 +13,7 @@
         @if ($errors->has('name'))
             <div class="invalid-feedback"> {{ $errors->first('name') }} </div>
         @endif
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Senha</label>
-        <input type="text" class="form-control @error('password') is-invalid @enderror" name="password">
-        @if ($errors->has('password'))
-            <div class="invalid-feedback"> {{ $errors->first('password') }} </div>
-        @endif
-    </div>
+    </div>    
     <div class="mb-3">
         <label class="form-label">E-mail</label>
         <input type="text" class="form-control @error('password') is-invalid @enderror" name="email">
@@ -29,10 +22,17 @@
         @endif
     </div>
     <div class="mb-3">
+        <label class="form-label">Senha</label>
+        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+        @if ($errors->has('password'))
+            <div class="invalid-feedback"> {{ $errors->first('password') }} </div>
+        @endif
+    </div>
+    <div class="mb-3">
         <label class="form-label">Permissao</label>
         <select name="permissao_do_usuario" class="form-select" aria-label="Clique para selecionar">
-            <option value="IsAdmin">IsAdmin</option>
-            <option value="IsUser">IsUser</option>
+            <option value="IsAdmin">Administrador</option>
+            <option value="Comum">Comum</option>
           </select>
     </div>
     <div class="mb-3">

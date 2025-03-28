@@ -26,8 +26,8 @@
     <div class="mb-3">
         <label class="form-label">Permissao</label>
         <select name="permissao_do_usuario" class="form-select" aria-label="Clique para selecionar">
-        <option value="IsAdmin" @selected($findUser->permissao_do_usuario == "IsAdmin") >IsAdmin</option>
-        <option value="IsUser" @selected($findUser->permissao_do_usuario == "IsUser")>IsUser</option>
+        <option value="IsAdmin" @selected($findUser->permissao_do_usuario == "IsAdmin") >Administrador</option>
+        <option value="IsUser" @selected($findUser->permissao_do_usuario == "comun")>Comum</option>
           </select>
     </div>
     <div class="mb-3">
