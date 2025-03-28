@@ -21,6 +21,8 @@ o autogestor.sql com o  scripts de criação do banco de dados
 <br> DB_PASSWORD=
 <br>
 Instruções para projetos
+<br>projetos esta porta 8000 em
+<br>http://127.0.0.1:8000/
 para subir o servidor utilizei o comando a abaixo 
 php -d variables_order=GPCS artisan serve
 
@@ -38,6 +40,8 @@ php -d variables_order=GPCS artisan serve
 <br> e-mail de acesso: 
 <br> superadmin@superadmin
 <br> Senha : superadmin
+
+
 
 
 
