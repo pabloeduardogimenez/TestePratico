@@ -10,7 +10,7 @@ padrão uff8mb4_unico_ci
 No repositório do https://github.com/pabloeduardogimenez/TestePratico,
 existe uma pasta com o nome backup database com o arquivo
 o autogestor.sql com o  scripts de criação do banco de dados 
-
+<br>
 Configurações no arquivo .env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -18,8 +18,7 @@ DB_PORT=3306
 DB_DATABASE=autogestao
 DB_USERNAME=root
 DB_PASSWORD=
-
-
+<br>
 
 Instruções para projetos
 para subir o servidor utilizei o comando a abaixo 
