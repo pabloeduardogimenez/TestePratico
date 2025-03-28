@@ -31,7 +31,7 @@
     <div class="mb-3">
         <label class="form-label">Permissao</label>
         <select name="permissao_do_usuario" class="form-select" aria-label="Clique para selecionar">
-            <option value="IsAdmin">Administrador</option>
+            <option value="Administrador">Administrador</option>
             <option value="Comum">Comum</option>
           </select>
     </div>
@@ -43,6 +43,19 @@
             <option value="categorias">Gestão de Categorias</option>
             <option value="total">Acesso Total</option>
           </select>
+    </div>
+    <div class="form-group">
+        <label for="title">Adicione Itens:</label>
+        <div class="form-group">
+            <input type="checkbox" name="acessos[]" value="produtos"> Produtos
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="acessos[]" value="marcas"> Marcas
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="acessos[]" value="categorias"> Categorias
+        </div>
+        
     </div>
 
     <button type="submit" class="btn btn-success"> Gravar </button>

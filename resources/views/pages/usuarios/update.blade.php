@@ -21,13 +21,13 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Senha</label>
-        <input value="{{ $findUser->password }}" type="password" class="form-control" name="password">
+        <input value="{{ $findUser->password }}" type="text" class="form-control" name="password">
     </div>
     <div class="mb-3">
         <label class="form-label">Permissao</label>
         <select name="permissao_do_usuario" class="form-select" aria-label="Clique para selecionar">
-        <option value="IsAdmin" @selected($findUser->permissao_do_usuario == "IsAdmin") >Administrador</option>
-        <option value="IsUser" @selected($findUser->permissao_do_usuario == "comun")>Comum</option>
+        <option value="Administrador" @selected($findUser->permissao_do_usuario == "Administrador") >Administrador</option>
+        <option value="Comum" @selected($findUser->permissao_do_usuario == "Comum")>Comum</option>
           </select>
     </div>
     <div class="mb-3">
