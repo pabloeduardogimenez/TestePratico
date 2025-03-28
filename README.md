@@ -23,3 +23,22 @@ o autogestor.sql com o  scripts de criação do banco de dados
 Instruções para projetos
 para subir o servidor utilizei o comando a abaixo 
 php -d variables_order=GPCS artisan serve
+
+Instruções para projetos
+para subir o servidor utilizei o comando a abaixo 
+php -d variables_order=GPCS artisan serve 
+
+<br> O banco de dados possuir dois usuários administradores
+<br> Usuários admin
+<br> e-mail de acesso: 
+<br> admin@admin
+<br> Senha admin
+
+<br> Usuários superadmin
+<br> e-mail de acesso: 
+<br> superadmin@superadmin
+<br> Senha : superadmin
+
+
+
+
