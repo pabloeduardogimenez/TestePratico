@@ -11,6 +11,10 @@ class ControleUsuarioPolicy
     if ( $user->permissao_do_usuario == "Administrador" ) {
         return true;
     }
+    if ( $user->permissao_do_usuario !== "Administrador" ) {
+        return true;
+    }
+    
     
 
     return false;
