@@ -31,7 +31,7 @@ php -d variables_order=GPCS artisan serve
 <br> O banco de dados possuir dois usuários administradores
 <br> Usuários admin
 <br> e-mail de acesso: 
-<br> dmin@admin
+<br> admin@admin
 <br> Senha admin
 
 <br> Usuários superadmin
