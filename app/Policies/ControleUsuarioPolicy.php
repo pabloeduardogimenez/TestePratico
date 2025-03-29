@@ -8,7 +8,9 @@ use Illuminate\Auth\Access\Response;
 class ControleUsuarioPolicy
 {
    public function acessoAPaginaUsuario(User $user) {
-    if ( $user->permissao_do_usuario == "Administrador" ) {
+    if ( $user->permissao_do_usuario == "Administrador")
+      //|| $user->permissao_do_usuario == NULL )
+    {
         return true;
     }
       
@@ -26,16 +28,15 @@ class ControleUsuarioPolicy
     return false;
    }
    public function acessoMarcas(User $user) {
-    if ($user->acesso_usuario == "marcas"  || 
+    if ($user->acesso_usuario == "marcas" || 
     $user->acesso_usuario == "total"  &&
     $user->permissao_do_usuario !== "Administrador" ) {
-        $marcas = true;
-    } else  {
-        return false;
-    }
-    
+        return true;
+    } 
+    return false;
+   }   
    
-   }
+ 
    public function acessoCategoria(User $user) {
     if ($user->acesso_usuario == "categorias"  || 
         $user->acesso_usuario == "total"  &&
@@ -44,6 +45,8 @@ class ControleUsuarioPolicy
     } 
 
     return false;
+
+
    }
 
 
