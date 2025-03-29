@@ -25,7 +25,7 @@ Instruções para projetos
 para subir o servidor utilizei o comando a abaixo 
 php -d variables_order=GPCS artisan serve
 <br>
-projetos esta porta 8000 em
+projetos esta porta 8000 
 <br>http://127.0.0.1:8000/
 <br>
 <br> O banco de dados possuir dois usuários administradores
