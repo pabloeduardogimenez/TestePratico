@@ -33,10 +33,10 @@
     <div class="mb-3">
         <label class="form-label">Acessos dos Usuários</label>
         <select name="acesso_usuario" class="form-select" aria-label="Clique para selecionar">
-        <option value="produtos" @selected($findUser->acesso_usuario == "produtos") >Gestão de Produtos</option>
-        <option value="marcas" @selected($findUser->acesso_usuario == "marcas")>Gestão de Marcas</option>
-        <option value="categorias" @selected($findUser->acesso_usuario == "categorias")>Gestão de Categorias</option>
-        <option value="total" @selected($findUser->acesso_usuario == "total")>Acesso Total</option>
+        <option value="Produtos" @selected($findUser->acesso_usuario == "produtos") >Gestão de Produtos</option>
+        <option value="Marcas" @selected($findUser->acesso_usuario == "marcas")>Gestão de Marcas</option>
+        <option value="Categorias" @selected($findUser->acesso_usuario == "categorias")>Gestão de Categorias</option>
+        <option value="Total" @selected($findUser->acesso_usuario == "total")>Acesso Total</option>
           </select>
     </div>
 
