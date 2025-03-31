@@ -9,8 +9,8 @@ nome do banco autogestao
 padrão uff8mb4_unico_ci
 <br>
 No repositório do https://github.com/pabloeduardogimenez/TestePratico,
-existe uma pasta com o nome backup database com o arquivo
-o autogestor.sql com o  scripts de criação do banco de dados 
+existe uma pasta com o nome backup database com os arquivos
+<br> o autogestor.sql e autogestorcompleto.sql com o  scripts de criação do banco de dados 
 <br>
 <br> Configurações no arquivo .env 
 <br> DB_CONNECTION=mysql
